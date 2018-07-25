@@ -12,10 +12,14 @@
 */
 
 //Route::get('/', function () {
-//    return view('welcome');
+//    return view('welcome');env
 //});
 
 Route::get('/','HomeController@index')->name('home');
+
+Route::get('/newcollection','NewcollectionController@show')->name('newcollection');
+
+
 
 Route::get('/shop','ShopController@show')->name('shop');
 Route::get('/product/{slug}','ProductController@show')->name('product');

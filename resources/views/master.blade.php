@@ -4,6 +4,7 @@
     <head>
 
         <title>@yield('title')</title>
+        @yield('style')
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--===============================================================================================-->
@@ -35,6 +36,7 @@
         <!--===============================================================================================-->
         <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+
         <!--===============================================================================================-->
     </head>
     <body class="animsition">
@@ -83,8 +85,9 @@
                         <ul class="main-menu">
                             <li class="active-menu">
                                 <a href="/">Home</a>
-
-
+                                <ul class="sub-menu">
+                                    <li><a href="{{route('newcollection')}}">New Collection</a></li>
+                                </ul>
                             </li>
 
                             <li >
@@ -114,34 +117,34 @@
         </div>
 
         <!-- Header Mobile -->
-        <div class="wrap-header-mobile">
-            <!-- Logo moblie -->
-            <div class="logo-mobile">
-                <a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
-            </div>
+        {{--<div class="wrap-header-mobile">--}}
+            {{--<!-- Logo moblie -->--}}
+            {{--<div class="logo-mobile">--}}
+                {{--<a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>--}}
+            {{--</div>--}}
 
-            <!-- Icon header -->
-            <div class="wrap-icon-header flex-w flex-r-m m-r-15">
-                <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
-                    <i class="zmdi zmdi-search"></i>
-                </div>
+            {{--<!-- Icon header -->--}}
+            {{--<div class="wrap-icon-header flex-w flex-r-m m-r-15">--}}
+                {{--<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">--}}
+                    {{--<i class="zmdi zmdi-search"></i>--}}
+                {{--</div>--}}
 
-                <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">
-                    <i class="zmdi zmdi-shopping-cart"></i>
-                </div>
+                {{--<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">--}}
+                    {{--<i class="zmdi zmdi-shopping-cart"></i>--}}
+                {{--</div>--}}
 
-                <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
-                    <i class="zmdi zmdi-favorite-outline"></i>
-                </a>
-            </div>
+                {{--<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">--}}
+                    {{--<i class="zmdi zmdi-favorite-outline"></i>--}}
+                {{--</a>--}}
+            {{--</div>--}}
 
-            <!-- Button show menu -->
-            <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-            </div>
-        </div>
+            {{--<!-- Button show menu -->--}}
+            {{--<div class="btn-show-menu-mobile hamburger hamburger--squeeze">--}}
+                    {{--<span class="hamburger-box">--}}
+                        {{--<span class="hamburger-inner"></span>--}}
+                    {{--</span>--}}
+            {{--</div>--}}
+        {{--</div>--}}
 
 
         <!-- Menu Mobile -->
@@ -232,7 +235,7 @@
 
 
     <!-- Footer -->
-    <footer class="bg3 p-t-75 p-b-32">
+    <footer class="bg3 p-t-30 m-t-180 p-b-20">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-lg-3 p-b-50">
